@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            @keyframes grow1 {
+                0% {
+                    width: 50px;
+                    background-color:red;
+                }
+
+                12.5% {
+                    width: 200px;
+                    background-color:yellow;
+                }
+
+                25% {
+                    width: 50px;
+                    background-color:yellow;
+                }
+
+                37.5% {
+                    width: 200px;
+                    background-color:deepskyblue;
+                }
+
+                50% {
+                    width: 50px;
+                    background-color:deepskyblue;
+                }
+
+                62.5% {
+                    width: 200px;
+                    background-color:darkgreen;
+                }
+
+                75% {
+                    width: 50px;
+                    background-color:darkgreen;
+                }
+
+                87.5% {
+                    width: 200px;
+                    background-color:red;
+                }
+
+                100% {
+                    width: 50px;
+                    background-color:red;
+                }
+            }
+
+            @keyframes grow2 {
+                0% {
+                    height: 50px;
+                    background-color:yellow;
+                }
+
+                12.5% {
+                    height: 200px;
+                    background-color:deepskyblue;
+                }
+
+                25% {
+                    height: 50px;
+                    background-color:deepskyblue;
+                }
+
+                37.5% {
+                    height: 200px;
+                    background-color:darkgreen;
+                }
+
+                50% {
+                    height: 50px;
+                    background-color:darkgreen;
+                }
+
+                62.5% {
+                    height: 200px;
+                    background-color:red;
+                }
+
+                75% {
+                    height: 50px;
+                    background-color:red;
+                }
+
+                87.5% {
+                    height: 200px;
+                    background-color:yellow;
+                }
+
+                100% {
+                    height: 50px;
+                    background-color:yellow;
+                }
+            }
+
+            @keyframes grow3 {
+                0% {
+                    width: 50px;
+                    background-color:deepskyblue;
+                    margin-left: 50px;
+                }
+
+                12.5% {
+                    width: 200px;
+                    background-color:darkgreen;
+                    margin-left: -100px;
+                }
+
+                25% {
+                    width: 50px;
+                    background-color:darkgreen;
+                    margin-left: 50px;
+                }
+
+                37.5% {
+                    width: 200px;
+                    background-color:red;
+                    margin-left: -100px;
+                }
+
+                50% {
+                    width: 50px;
+                    background-color:red;
+                    margin-left: 50px;
+                }
+
+                62.5% {
+                    width: 200px;
+                    background-color:yellow;
+                    margin-left: -100px;
+                }
+
+                75% {
+                    width: 50px;
+                    background-color:yellow;
+                    margin-left: 50px;
+                }
+
+                87.5% {
+                    width: 200px;
+                    background-color:deepskyblue;
+                    margin-left: -100px;
+                }
+
+                100% {
+                    width: 50px;
+                    background-color:deepskyblue;
+                    margin-left: 50px;
+                }
+            }
+
+            @keyframes grow4 {
+                0% {
+                    height: 50px;
+                    background-color:darkgreen;
+                    margin-top: 150px;
+                }
+
+                12.5% {
+                    height: 200px;
+                    background-color:red;
+                    margin-top: 0px;
+                }
+
+                25% {
+                    height: 50px;
+                    background-color:red;
+                    margin-top: 150px;
+                }
+
+                37.5% {
+                    height: 200px;
+                    background-color:yellow;
+                    margin-top: 0px;
+                }
+
+                50% {
+                    height: 50px;
+                    background-color:yellow;
+                    margin-top: 150px;
+                }
+
+                62.5% {
+                    height: 200px;
+                    background-color:deepskyblue;
+                    margin-top: 0px;
+                }
+
+                75% {
+                    height: 50px;
+                    background-color:deepskyblue;
+                    margin-top: 150px;
+                }
+
+                87.5% {
+                    height: 200px;
+                    background-color:darkgreen;
+                    margin-top: 0px;
+                }
+
+                100% {
+                    height: 50px;
+                    background-color:darkgreen;
+                    margin-top: 150px;
+                }
+            }
+
+            .dot1, .dot2, .dot3, .dot4 {
+                animation-duration: 10s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-play-state: paused;
+                position: fixed;
+                border-radius: 50px;
+            }
+
+            .dot1 {
+                height: 50px;
+                animation-name: grow1;
+                margin-left: -100px;
+                z-index: 4;
+            }
+
+            .dot2 {
+                width: 50px;
+                animation-name: grow2;
+                margin-left: 50px;
+                z-index: 3;
+            }
+
+            .dot3 {
+                height: 50px;
+                animation-name: grow3;
+                margin-top: 150px;
+                z-index: 2;
+            }
+
+            .dot4 {
+                width: 50px;
+                animation-name: grow4;
+                margin-left: -100px;
+                z-index: 1;
+            }
+
+            .btn {
+                position: fixed;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: teal;
+                margin-top: 250px;
+                color: white;
+                font-size: 12pt;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            .container {
+                display: flex;
+                margin-top: 100px;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const elements = document.querySelectorAll(".a");
+                document.querySelector("#start").onclick = function() {
+                    elements.forEach(element => {
+                        element.style.webkitAnimationPlayState = "running";
+                    });
+                }
+
+                document.querySelector("#stop").onclick = function() {
+                    elements.forEach(element => {
+                        element.style.animation = "none";
+                        element.offsetHeight; /* trigger reflow */
+                        element.style.animation = null; 
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <span class="dot1 a">  
+                </span>
+                <span class="dot2 a">
+                </span>
+                <span class="dot3 a">
+                </span>
+                <span class="dot4 a">
+                </span>
+                <button id="start" class="btn" style="margin-left: -100px;">Start</button>
+                <button id="stop" class="btn" style="margin-left: 20px;">Stop</button>
+            </div>
+        </div>
+    </body>
+</html>
